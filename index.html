@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- =====================================================================
+  EDIT CHECKLIST (search this file for the bracketed placeholders):
+    Fleming Towing       -> his company name
+    (612) 601-9731        -> display phone number
+    +16126019731          -> same number for tel: links and JSON-LD (+1 and digits only)
+    https://www.example.com/ -> his real domain (also in sitemap.xml and robots.txt)
+    [STREET ADDRESS] etc. -> only if he has a public shop address (needed for mechanic/oil change)
+  SEO pieces already in place: title, meta description, canonical, Open Graph,
+  one H1, LocalBusiness JSON-LD, tel: links, alt text, mobile-first layout.
+  His NAP (name, address, phone) must match his Google Business Profile exactly.
+====================================================================== -->
+
+<title>Towing &amp; Roadside Assistance | Minneapolis–St. Paul | Fleming Towing</title>
+<meta name="description" content="Fleming Towing provides towing, roadside assistance, lockouts, tire changes, junk car removal and more within 50 miles of Minneapolis–St. Paul. Call now.">
+<link rel="canonical" href="https://www.example.com/">
+<meta name="theme-color" content="#1b1f24">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Towing &amp; Roadside Assistance | Minneapolis–St. Paul | Fleming Towing">
+<meta property="og:description" content="Towing, roadside assistance, lockouts, junk car removal and more across the Twin Cities area.">
+<meta property="og:url" content="https://www.example.com/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoTowing",
+  "name": "Fleming Towing",
+  "url": "https://www.example.com/",
+  "telephone": "+16126019731",
+  "description": "Towing, roadside assistance, lockouts, tire changes, gas delivery, junk car removal and auto repair serving the Minneapolis–St. Paul area.",
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 44.9778, "longitude": -93.2650 },
+    "geoRadius": "80467"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "[STREET ADDRESS]",
+    "addressLocality": "[CITY]",
+    "addressRegion": "MN",
+    "postalCode": "[ZIP]",
+    "addressCountry": "US"
+  }
+}
+</script>
+<!-- If he is open 24/7, add inside the JSON-LD above:
+  "openingHoursSpecification": {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}
+  If he has no public shop, delete the whole "address" block instead of leaving placeholders. -->
+
+<style>
+  :root{
+    --bg:#ffffff;
+    --ink:#1b1f24;
+    --muted:#59626d;
+    --panel:#f3f4f6;
+    --dark:#1b1f24;
+    --accent:#ffc400;
+    --accent-ink:#1b1f24;
+    --radius:12px;
+    --max:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.55;
+    padding-bottom:76px; /* room for sticky call bar on mobile */
+  }
+  a{color:inherit}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+  header.site{background:var(--dark);color:#fff}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
+  .brand{font-weight:800;letter-spacing:.2px;font-size:1.1rem;text-decoration:none}
+  .brand span{color:var(--accent)}
+  .btn{
+    display:inline-block;background:var(--accent);color:var(--accent-ink);
+    font-weight:800;text-decoration:none;border-radius:999px;
+    padding:14px 24px;font-size:1.05rem;border:0;
+  }
+  .btn:hover,.btn:focus-visible{filter:brightness(.95);outline:3px solid #fff3;outline-offset:2px}
+  .btn.small{padding:10px 18px;font-size:.95rem}
+
+  .hero{background:var(--dark);color:#fff;padding:40px 0 56px}
+  .hero h1{font-size:clamp(2rem,6vw,3.2rem);line-height:1.1;margin:0 0 14px;letter-spacing:-.5px}
+  .hero p{font-size:1.1rem;max-width:34em;margin:0 0 24px;color:#d6dae0}
+  .hero .phone{display:block;margin-top:14px;color:#d6dae0;font-size:.95rem}
+
+  section{padding:48px 0}
+  section.alt{background:var(--panel)}
+  h2{font-size:clamp(1.5rem,4vw,2rem);margin:0 0 8px;letter-spacing:-.3px}
+  .lede{color:var(--muted);margin:0 0 28px;max-width:40em}
+
+  .grid{display:grid;gap:14px;grid-template-columns:1fr}
+  .card{background:#fff;border:1px solid #e3e6ea;border-radius:var(--radius);padding:18px}
+  section.alt .card{border-color:#e3e6ea}
+  .card h3{margin:0 0 6px;font-size:1.1rem}
+  .card p{margin:0;color:var(--muted);font-size:.97rem}
+
+  .photos{display:grid;gap:12px;grid-template-columns:1fr}
+  .photos img,.photo-ph{
+    width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);background:#d9dde2;display:block;
+  }
+  .photo-ph{display:flex;align-items:center;justify-content:center;color:#59626d;font-weight:600;text-align:center;padding:12px}
+
+  .area ul{columns:2;padding-left:18px;margin:12px 0 0;color:var(--muted)}
+  .cta{background:var(--dark);color:#fff;text-align:center}
+  .cta p{color:#d6dae0;margin:0 0 20px}
+  .cta .big{font-size:clamp(1.8rem,7vw,2.6rem);font-weight:800;display:block;margin:6px 0 18px;color:var(--accent);text-decoration:none}
+
+  footer{background:#111418;color:#aeb5be;padding:28px 0;font-size:.9rem}
+  footer a{color:#fff}
+
+  .callbar{
+    position:fixed;left:0;right:0;bottom:0;z-index:10;
+    background:var(--accent);color:var(--accent-ink);
+    text-align:center;font-weight:800;font-size:1.15rem;
+    padding:18px 12px;text-decoration:none;
+    box-shadow:0 -2px 12px #0003;
+  }
+
+  @media (min-width:700px){
+    body{padding-bottom:0}
+    .callbar{display:none}
+    .grid{grid-template-columns:repeat(3,1fr)}
+    .photos{grid-template-columns:repeat(3,1fr)}
+    .hero{padding:72px 0 88px}
+    section{padding:72px 0}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">Fleming Towing</a>
+    <a class="btn small" href="tel:+16126019731">Call (612) 601-9731</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <h1 id="hero-title">Towing &amp; Roadside Assistance in Minneapolis–St. Paul</h1>
+      <p>Stuck, locked out, or need a car gone? Fleming Towing covers the Twin Cities and everything within 50 miles. Call and talk to a real person.</p>
+      <a class="btn" href="tel:+16126019731">Call Now: (612) 601-9731</a>
+      <!-- If he is truly 24/7, uncomment the line below. Do not claim it otherwise. -->
+      <!-- <span class="phone">Available 24 hours a day, 7 days a week</span> -->
+    </div>
+  </section>
+
+  <section id="services" class="alt" aria-labelledby="services-title">
+    <div class="wrap">
+      <h2 id="services-title">Our Services</h2>
+      <p class="lede">Towing is what we do best, and we handle the rest of your car trouble too.</p>
+      <div class="grid">
+        <article class="card"><h3>Towing</h3><p>Safe towing for cars, trucks and SUVs, to your home, a shop, or wherever you need.</p></article>
+        <article class="card"><h3>Roadside Assistance</h3><p>Broken down on the highway or in a parking lot? We come to you.</p></article>
+        <article class="card"><h3>Lockouts</h3><p>Keys locked in the car? We get you back in without damage.</p></article>
+        <article class="card"><h3>Tire Changes</h3><p>Flat tire on the side of the road? We swap on your spare and get you moving.</p></article>
+        <article class="card"><h3>Gas Fill-ups</h3><p>Ran out of fuel? We bring enough to get you to the nearest station.</p></article>
+        <article class="card"><h3>Oil Changes</h3><p>Quick, straightforward oil changes.</p></article>
+        <article class="card"><h3>Auto Mechanic</h3><p>General auto repair and diagnostics.</p></article>
+        <article class="card"><h3>Junk Car Removal</h3><p>Got a car that no longer runs? We haul it away.</p></article>
+        <article class="card"><h3>We Buy Junk Cars</h3><p>Call us with the year, make and condition and we'll make you an offer.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="photos" aria-labelledby="photos-title">
+    <div class="wrap">
+      <h2 id="photos-title">Our Trucks &amp; Team</h2>
+      <p class="lede">Real trucks, real people, local to the Twin Cities.</p>
+      <div class="photos">
+        <!-- Replace each .photo-ph div with:
+             <img src="images/truck-1.jpg" alt="Fleming Towing flatbed tow truck in Minneapolis" width="800" height="600" loading="lazy">
+             Compress photos (under ~200 KB each) before uploading. Keep alt text descriptive. -->
+        <div class="photo-ph">Photo 1: tow truck</div>
+        <div class="photo-ph">Photo 2: truck or team</div>
+        <div class="photo-ph">Photo 3: truck or team</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="area" class="alt area" aria-labelledby="area-title">
+    <div class="wrap">
+      <h2 id="area-title">Service Area</h2>
+      <p class="lede">We serve Minneapolis, St. Paul and the surrounding area within a 50-mile radius.</p>
+      <!-- Only list cities he actually wants to rank for and will really drive to. -->
+      <ul>
+        <li>Minneapolis</li>
+        <li>St. Paul</li>
+        <li>Bloomington</li>
+        <li>Brooklyn Park</li>
+        <li>Plymouth</li>
+        <li>Woodbury</li>
+        <li>Eagan</li>
+        <li>Maple Grove</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="cta" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title">Need Help Right Now?</h2>
+      <p>Tap the number to call us directly.</p>
+      <a class="big" href="tel:+16126019731">(612) 601-9731</a>
+      <a class="btn" href="tel:+16126019731">Call Fleming Towing</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Fleming Towing</strong> · Minneapolis–St. Paul, MN · <a href="tel:+16126019731">(612) 601-9731</a></p>
+    <!-- Add license / insurance / DOT numbers here ONLY if he supplies them and they are required for his service type. -->
+    <p>&copy; <span id="yr">2026</span> Fleming Towing. All rights reserved.</p>
+  </div>
+</footer>
+
+<a class="callbar" href="tel:+16126019731" aria-label="Call Fleming Towing">Tap to Call (612) 601-9731</a>
+
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
